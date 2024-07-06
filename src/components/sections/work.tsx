@@ -1,8 +1,8 @@
-import { PROJECTS } from '@/lib/data';
-import ProjectDetails from '@/components/data-display/project-details';
-import Tag from '@/components/data-display/tag';
-import Typography from '@/components/general/typography';
-import Container from '@/components/layout/container';
+import { PROJECTS } from "@/lib/data";
+import ProjectDetails from "@/components/data-display/project-details";
+import Tag from "@/components/data-display/tag";
+import Typography from "@/components/general/typography";
+import Container from "@/components/layout/container";
 
 const WorkSection = () => {
   return (
@@ -20,7 +20,7 @@ const WorkSection = () => {
         <ProjectDetails
           key={index}
           {...project}
-          layoutType={index % 2 === 0 ? 'default' : 'reverse'}
+          layoutType={index % 2 === 0 ? "default" : "reverse"}
         />
       ))}
     </Container>

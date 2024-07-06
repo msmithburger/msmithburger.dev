@@ -1,11 +1,11 @@
-import Image from 'next/image';
+import Image from "next/image";
 
-import SagarFullPose from '/public/images/sagar-full-pose.jpg';
-import Tag from '@/components/data-display/tag';
-import Container from '@/components/layout/container';
-import Typography from '@/components/general/typography';
-import Link from '@/components/navigation/link';
-import { EXTERNAL_LINKS } from '@/lib/data';
+import MattFullPose from "/public/images/matt-full-pose.jpg";
+import Tag from "@/components/data-display/tag";
+import Container from "@/components/layout/container";
+import Typography from "@/components/general/typography";
+import Link from "@/components/navigation/link";
+import { EXTERNAL_LINKS } from "@/lib/data";
 
 const AboutMeSection = () => {
   return (
@@ -19,10 +19,10 @@ const AboutMeSection = () => {
         <div className="flex justify-center md:order-first md:justify-end">
           <div className="relative h-[380px] w-[320px] md:h-[460px] md:w-[380px] lg:h-[520px] lg:w-[440px]">
             <Image
-              src={SagarFullPose}
-              alt="Fullpose of Sagar"
+              src={MattFullPose}
+              alt="Fullpose of Matt"
               className="absolute z-10 h-[360px] w-[280px] border-8 border-gray-50 max-md:left-5 md:right-0 md:top-0 md:h-[420px] md:w-[340px] lg:h-[480px] lg:w-[400px]"
-              style={{ objectFit: 'cover' }}
+              style={{ objectFit: "cover" }}
             ></Image>
             <div className="absolute h-[360px] w-[320px] border-8 border-transparent bg-gray-200 max-md:top-5 md:bottom-0 md:left-0 md:h-[420px] md:w-[340px] lg:h-[480px] lg:w-[400px]"></div>
           </div>
@@ -30,52 +30,41 @@ const AboutMeSection = () => {
 
         {/* Content */}
         <div className="flex max-w-xl flex-col gap-6">
-          <Typography variant="h3">
-            Curious about me? Here you have it:
+          <Typography variant="h3">A little more about me:</Typography>
+          <Typography>
+            I&apos;m a passionate full stack developer of 10 years. I initially
+            started as a UI developer, but quickly branched to the backend as I
+            wanted to understand how the entire system worked. I began my career
+            in 2013 and it has been quite a whirlwind. I&apos;ve worked for a
+            large margeting agency, a FinTech startup, an AI email marketing
+            startup, an e-commerce consulting shop, and even ran my own small
+            business doing custom software development.
           </Typography>
           <Typography>
-            I&apos;m a passionate,{' '}
-            <Link
-              noCustomization
-              externalLink
-              withUnderline
-              href={EXTERNAL_LINKS.FIGMA}
-            >
-              self-proclaimed designer
-            </Link>{' '}
-            who specializes in full stack development (React.js & Node.js). I am
-            enthusiastic about bringing the technical and visual aspects of
-            digital products to life. User experience, pixel perfect design, and
-            writing clear, readable, highly performant code matters to me.
+            Over that time, I&apos;ve written thousands of lines of code,
+            shipped tons of features (with no bugs of course), and managed some
+            amazing projects and developers. I&apos;m currently back to doing
+            freelance work as that is what I enjoy doing the most. I&apos;m a
+            generalist and love to learn new things, and I&apos;m always looking
+            for new opportunities to do that.
           </Typography>
           <Typography>
-            I began my journey as a web developer in 2015, and since then,
-            I&apos;ve continued to grow and evolve as a developer, taking on new
-            challenges and learning the latest technologies along the way. Now,
-            in my early thirties, 7 years after starting my web development
-            journey, I&apos;m building cutting-edge web applications using
-            modern technologies such as Next.js, TypeScript, Nestjs,
-            Tailwindcss, Supabase and much more.
+            Currently, I live in Wadsworth, OH, USA with my wife, our 4 year old
+            daughter, and two dogs. I&apos;m a big fan of the outdoors and enjoy
+            hiking, running, kayaking, and camping. I also love to read, travel,
+            watch anime, and golf. I might also have an addiction to watching
+            The Office and will randomly quote the show.
           </Typography>
           <Typography>
-            I am very much a progressive thinker and enjoy working on products
-            end to end, from ideation all the way to development.
+            As someone who was diagnosed later in life with ADHD and who has
+            dealt with anxiety their entire life, I&apos;m a massive advocate
+            for mental health awareness. I love connecting with other
+            neuro-diverse individuals. Even if you just want to chat about
+            nothing, I&apos;m always down.
           </Typography>
           <Typography>
-            When I&apos;m not in full-on developer mode, you can find me
-            hovering around on twitter or on indie hacker, witnessing the
-            journey of early startups or enjoying some free time. You can follow
-            me on{' '}
-            <Link
-              noCustomization
-              externalLink
-              withUnderline
-              href={EXTERNAL_LINKS.TWITTER}
-            >
-              Twitter
-            </Link>{' '}
-            where I share tech-related bites and build in public, or you can
-            follow me on{' '}
+            I&apos;m not a big fan of social media (never have been), but you
+            can find some of my newer projects on my{" "}
             <Link
               noCustomization
               externalLink
@@ -84,25 +73,22 @@ const AboutMeSection = () => {
             >
               GitHub
             </Link>
-            .
+            . I also plan to begin blogging and doing some other content
+            creation in the future.
           </Typography>
           <Typography>Finally, some quick bits about me.</Typography>
           <div className="flex flex-col gap-2 md:flex-row md:gap-6">
             <ul className="flex list-inside list-disc flex-col gap-2">
               <Typography component="li">
-                B.E. in Computer Engineering
+                B.S. in Computer Science (2013)
               </Typography>
               <Typography component="li">Full time freelancer</Typography>
             </ul>
             <ul className="flex list-inside list-disc flex-col gap-2">
               <Typography component="li">Avid learner</Typography>
-              <Typography component="li">Aspiring indie hacker</Typography>
+              <Typography component="li">Professional rabbit holer</Typography>
             </ul>
           </div>
-          <Typography>
-            One last thing, I&apos;m available for freelance work, so feel free
-            to reach out and say hello! I promise I don&apos;t bite 😉
-          </Typography>
         </div>
       </div>
     </Container>

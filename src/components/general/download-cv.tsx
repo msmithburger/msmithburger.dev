@@ -1,10 +1,14 @@
-'use client';
+"use client";
 
-import Button from '@/components/general/button';
+import Button from "@/components/general/button";
 
 const DownloadCV = () => {
   return (
-    <Button onClick={() => window?.open('/files/sagar-cv-2023.pdf', '_blank')}>
+    <Button
+      onClick={() =>
+        window?.open("/files/matthew-smithburger-cv-2024.pdf", "_blank")
+      }
+    >
       Download CV
     </Button>
   );

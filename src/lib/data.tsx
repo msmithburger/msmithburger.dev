@@ -1,291 +1,349 @@
-import { Github, Twitter, Figma } from 'lucide-react';
+import { Github, Twitter, Figma, Linkedin } from "lucide-react";
 
-import LogoJavascript from '/public/images/logos/icon-javascript.svg';
-import LogoTypescript from '/public/images/logos/icon-typescript.svg';
-import LogoReact from '/public/images/logos/icon-react.svg';
-import LogoNextjs from '/public/images/logos/icon-nextjs.svg';
-import LogoNodejs from '/public/images/logos/icon-nodejs.svg';
-import LogoExpress from '/public/images/logos/icon-express.svg';
-import LogoExpressLight from '/public/images/logos/icon-express-light.svg';
-import LogoNest from '/public/images/logos/icon-nest.svg';
-import LogoSocket from '/public/images/logos/icon-socket.svg';
-import LogoSocketLight from '/public/images/logos/icon-socket-light.svg';
-import LogoPostgreSQL from '/public/images/logos/icon-postgresql.svg';
-import LogoMongoDB from '/public/images/logos/icon-mongodb.svg';
-import LogoSass from '/public/images/logos/icon-sass.svg';
-import LogoTailwindcss from '/public/images/logos/icon-tailwindcss.svg';
-import LogoFigma from '/public/images/logos/icon-figma.svg';
-import LogoCypress from '/public/images/logos/icon-cypress.svg';
-import LogoCypressLight from '/public/images/logos/icon-cypress-light.svg';
-import LogoStorybook from '/public/images/logos/icon-storybook.svg';
-import LogoGit from '/public/images/logos/icon-git.svg';
-
-import LogoUpwork from '/public/images/logos/logo-upwork.svg';
-import LogoGreenApex from '/public/images/logos/logo-greenapex.svg';
-import LogoGreenApexLight from '/public/images/logos/logo-greenapex-light.svg';
-import LogoDotnpixel from '/public/images/logos/logo-dotnpixel.svg';
-import LogoDotnpixelLight from '/public/images/logos/logo-dotnpixel-light.svg';
-
-import ProjectFiskil from '/public/images/project-fiskil.png';
-import ProjectWingie from '/public/images/project-wingie.png';
-import ProjectPepehousing from '/public/images/project-pepehousing.png';
-
-import AvatarKrisztian from '/public/images/avatar-krisztian.png';
-import AvatarEugen from '/public/images/avatar-eugen.png';
-import AvatarDummy from '/public/images/avatar-dummy.svg';
+import LogoTypescript from "/public/images/logos/icon-typescript.svg";
+import LogoReact from "/public/images/logos/icon-react.svg";
+import LogoNextjs from "/public/images/logos/icon-nextjs.svg";
+import LogoNodejs from "/public/images/logos/icon-nodejs.svg";
+import LogoNest from "/public/images/logos/icon-nest.svg";
+import LogoExpress from "/public/images/logos/icon-express.svg";
+import LogoExpressLight from "/public/images/logos/icon-express-light.svg";
+import LogoPython from "/public/images/logos/icon-python.svg";
+import LogoPostgreSQL from "/public/images/logos/icon-postgresql.svg";
+import LogoMongoDB from "/public/images/logos/icon-mongodb.svg";
+import LogoGraphQL from "/public/images/logos/icon-graphql.svg";
+import LogoAWS from "/public/images/logos/icon-aws.svg";
+import LogoAWSLight from "/public/images/logos/icon-aws-light.svg";
+import LogoTerraform from "/public/images/logos/icon-terraform.svg";
+import LogoServerless from "/public/images/logos/icon-serverless.svg";
+import LogoPrisma from "/public/images/logos/icon-prisma.svg";
+import LogoPrismaLight from "/public/images/logos/icon-prisma-light.svg";
+import LogoTailwindcss from "/public/images/logos/icon-tailwindcss.svg";
+import LogoSass from "/public/images/logos/icon-sass.svg";
+import LogoStorybook from "/public/images/logos/icon-storybook.svg";
+import LogoMui from "/public/images/logos/icon-mui.svg";
+import LogoAuth0 from "/public/images/logos/icon-auth0.svg";
+import LogoGit from "/public/images/logos/icon-git.svg";
+import LogoWordpress from "/public/images/logos/icon-wordpress.svg";
+import LogoWordpressLight from "/public/images/logos/icon-wordpress-light.svg";
+import LogoVSCode from "/public/images/logos/icon-vs-code.svg";
+import LogoNotion from "/public/images/logos/icon-notion.svg";
+import LogoDocker from "/public/images/logos/icon-docker.svg";
+import LogoLinear from "/public/images/logos/icon-linear.svg";
+import LogoLinearLight from "/public/images/logos/icon-linear-light.svg";
+import LogoUpwork from "/public/images/logos/icon-upwork.svg";
+import LogoSyrup from "/public/images/logos/logo-syrup.jpg";
+import LogoXngage from "/public/images/logos/logo-xngage.jpg";
 
 import {
   ExperienceDetails,
   ProjectDetails,
   TechDetails,
   TestimonialDetails,
-} from '@/lib/types';
+} from "@/lib/types";
+import Image from "next/image";
 
 export const EXTERNAL_LINKS = {
-  GITHUB: 'https://github.com/shahsagarm',
-  GITHUB_REPO: 'https://github.com/shahsagarm/sagarshah.dev',
-  TWITTER: 'https://twitter.com/shahsagarm',
-  FIGMA: 'https://www.figma.com/@shahsagarm',
-  FIGMA_FILE:
-    'https://www.figma.com/community/file/1262992249991763120/Personal-Portfolio-Website-Template-%7C-Mobile-%26-Desktop',
+  GITHUB: "https://github.com/msmithburger",
+  GITHUB_REPO: "https://github.com/msmithburger/msmithburger.dev",
 };
 
 export const NAV_LINKS = [
   {
-    label: 'About',
-    href: '#about',
+    label: "About",
+    href: "#about",
   },
   {
-    label: 'Work',
-    href: '#work',
+    label: "Skills",
+    href: "#skills",
   },
   {
-    label: 'Testimonials',
-    href: '#testimonials',
+    label: "Work",
+    href: "#work",
   },
+
   {
-    label: 'Contact',
-    href: '#contact',
+    label: "Contact",
+    href: "#contact",
   },
 ];
 
 export const SOCIAL_LINKS = [
   {
     icon: Github,
-    url: 'https://github.com/shahsagarm',
+    url: "https://github.com/msmithburger",
   },
   {
-    icon: Twitter,
-    url: 'https://twitter.com/shahsagarm',
+    icon: Linkedin,
+    url: "https://www.linkedin.com/in/mattsmithburger/",
   },
   {
-    icon: Figma,
-    url: 'https://www.figma.com/@shahsagarm',
+    icon: ({ className }: { className?: string }) => (
+      <Image
+        src={LogoUpwork}
+        alt="Upwork"
+        className={className}
+        width={24}
+        height={24}
+      />
+    ),
+    url: "https://www.upwork.com/freelancers/~019d82731062ab67bd",
   },
 ];
 
-export const TECHNOLOGIES: TechDetails[] = [
+export const PREFERRED_TECHNOLOGIES: TechDetails[] = [
   {
-    label: 'Javascript',
-    logo: LogoJavascript,
-    url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
-  },
-  {
-    label: 'Typescript',
+    label: "Typescript",
     logo: LogoTypescript,
-    url: 'https://www.typescriptlang.org/',
+    url: "https://www.typescriptlang.org/",
   },
   {
-    label: 'React',
+    label: "React",
     logo: LogoReact,
-    url: 'https://react.dev/',
+    url: "https://react.dev/",
   },
   {
-    label: 'Next.js',
+    label: "Next.js",
     logo: LogoNextjs,
-    url: 'https://nextjs.org/',
+    url: "https://nextjs.org/",
   },
   {
-    label: 'Node.js',
+    label: "Node.js",
     logo: LogoNodejs,
-    url: 'https://nodejs.org/en',
+    url: "https://nodejs.org/en",
   },
   {
-    label: 'Express.js',
+    label: "GraphQL",
+    logo: LogoGraphQL,
+    url: "https://graphql.org/",
+  },
+  {
+    label: "AWS",
+    logo: LogoAWS,
+    darkModeLogo: LogoAWSLight,
+    url: "https://aws.amazon.com/",
+  },
+  {
+    label: "PostgreSQL",
+    logo: LogoPostgreSQL,
+    url: "https://www.postgresql.org/",
+  },
+  {
+    label: "Tailwindcss",
+    logo: LogoTailwindcss,
+    url: "https://tailwindcss.com/",
+  },
+];
+
+export const PREFERRED_TOOLS: TechDetails[] = [
+  {
+    label: "Git",
+    logo: LogoGit,
+    url: "https://git-scm.com/",
+  },
+  {
+    label: "VSCode",
+    logo: LogoVSCode,
+    url: "https://code.visualstudio.com/",
+  },
+  {
+    label: "Docker",
+    logo: LogoDocker,
+    url: "https://www.docker.com/",
+  },
+  {
+    label: "Notion",
+    logo: LogoNotion,
+    url: "https://notion.so/",
+  },
+  {
+    label: "Linear",
+    logo: LogoLinear,
+    darkModeLogo: LogoLinearLight,
+    url: "https://linear.app/",
+  },
+];
+
+export const OTHER_TECHNOLOGIES: TechDetails[] = [
+  {
+    label: "Python",
+    logo: LogoPython,
+    url: "https://www.python.org/",
+  },
+  {
+    label: "Express.js",
     logo: LogoExpress,
     darkModeLogo: LogoExpressLight,
-    url: 'https://expressjs.com/',
+    url: "https://expressjs.com/",
   },
   {
-    label: 'Nest.js',
+    label: "Nest.js",
     logo: LogoNest,
-    url: 'https://nestjs.com/',
+    url: "https://nestjs.com/",
   },
   {
-    label: 'Socket.io',
-    logo: LogoSocket,
-    darkModeLogo: LogoSocketLight,
-    url: 'https://socket.io/',
-  },
-  {
-    label: 'PostgreSQL',
-    logo: LogoPostgreSQL,
-    url: 'https://www.postgresql.org/',
-  },
-  {
-    label: 'MongoDB',
+    label: "MongoDB",
     logo: LogoMongoDB,
-    url: 'https://www.mongodb.com/',
+    url: "https://www.mongodb.com/",
   },
   {
-    label: 'Sass/Scss',
-    logo: LogoSass,
-    url: 'https://sass-lang.com/',
+    label: "Prisma",
+    logo: LogoPrisma,
+    darkModeLogo: LogoPrismaLight,
+    url: "https://www.prisma.io/",
   },
   {
-    label: 'Tailwindcss',
-    logo: LogoTailwindcss,
-    url: 'https://tailwindcss.com/',
+    label: "Terraform",
+    logo: LogoTerraform,
+    url: "https://www.terraform.io/",
   },
   {
-    label: 'Figma',
-    logo: LogoFigma,
-    url: 'https://www.figma.com/',
+    label: "Serverless",
+    logo: LogoServerless,
+    url: "https://www.serverless.com/",
   },
   {
-    label: 'Cypress',
-    logo: LogoCypress,
-    darkModeLogo: LogoCypressLight,
-    url: 'https://www.cypress.io/',
+    label: "MUI",
+    logo: LogoMui,
+    url: "https://mui.com/",
   },
   {
-    label: 'Storybook',
+    label: "Storybook",
     logo: LogoStorybook,
-    url: 'https://storybook.js.org/',
+    url: "https://storybook.js.org/",
   },
   {
-    label: 'Git',
-    logo: LogoGit,
-    url: 'https://git-scm.com/',
+    label: "Sass",
+    logo: LogoSass,
+    url: "https://sass-lang.com/",
+  },
+  {
+    label: "Wordpress",
+    logo: LogoWordpress,
+    darkModeLogo: LogoWordpressLight,
+    url: "https://wordpress.org/",
+  },
+  {
+    label: "Auth0",
+    logo: LogoAuth0,
+    url: "https://auth0.com/",
   },
 ];
 
 export const EXPERIENCES: ExperienceDetails[] = [
   {
     logo: LogoUpwork,
-    logoAlt: 'Upwork logo',
-    position: 'Independent Freelancer',
-    startDate: new Date(2021, 10),
+    logoAlt: "Upwork logo",
+    position: "Independent Software Developer",
+    startDate: new Date(2020, 7),
     currentlyWorkHere: true,
     summary: [
-      'Worked for various clients like Fiskil, Shosho, Crowe MacKay LLP.',
-      'Worked with a variety of technologies, including React, Next.js, Typescript, Express.js, PostgreSQL, Tailwindcss, Mui, Firebase, Storybook, Cypress, and others.',
+      "Top 1% on the platform with 100% project success.",
+      "Designed and implemented custom web applications using a modern tech stack including TypeScript, React (Next.js), Node.js, Tailwind, and AWS.",
+      "Collaborated with clients to understand requirements, provide technical guidance, and ensure project milestones were met, resulting in a 100% project success rate and high client satisfaction.",
+      "Delivered tailored solutions for clients in diverse industries, including e-commerce, healthcare, finance, and education, demonstrating adaptability and deep technical expertise.",
     ],
   },
   {
-    logo: LogoGreenApex,
-    darkModeLogo: LogoGreenApexLight,
-    logoAlt: 'Greenapex logo',
-    position: 'Team Lead',
-    startDate: new Date(2017, 6),
-    endDate: new Date(2021, 9),
+    logo: LogoSyrup,
+    logoAlt: "Syrup logo",
+    position: "Founding Full Stack Developer",
+    startDate: new Date(2022, 6),
+    endDate: new Date(2023, 6),
     summary: [
-      'Acted as team lead in different projects.',
-      'Brainstormed new ideas & gathered requirements for internal projects.',
-      'Designed architecture of different projects (frontend + backend).',
-      'Worked on enterprise-level projects for a variety of clients.',
-      'Handled sprint planning & task distribution.',
+      "Built numerous vital features for launch using Next.js, Node.js, TypeScript, GraphQL, PostgreSQL, and AWS, contributing to a robust and scalable platform.",
+      "Authored comprehensive standards documentation for incoming developers, ensuring consistency and quality in future development efforts.",
+      "Designed and managed a sophisticated data architecture to handle large-scale data ingestion and analytics, leveraging AWS services.",
+      "Integrated with OpenAI API to enable real-time email marketing content and campaigns.",
     ],
   },
   {
-    logo: LogoDotnpixel,
-    darkModeLogo: LogoDotnpixelLight,
-    logoAlt: 'Dotnpixel logo',
-    position: 'Full Stack Developer',
-    startDate: new Date(2015, 11),
-    endDate: new Date(2017, 4),
-    summary: ['Worked as a full stack developer (React / Laravel).'],
+    logo: LogoXngage,
+    logoAlt: "Xngage logo",
+    position: "Lead Front End Developer",
+    startDate: new Date(2016, 6),
+    endDate: new Date(2020, 8),
+    summary: [
+      "Led the UI practice, establishing workflow processes and consistent coding standards, significantly improving code quality and team efficiency across all projects.",
+      "Coordinated project requirements to implementation, providing accurate sizing estimates and detailed task breakdowns.",
+      "Initiated the adoption of cutting-edge frontend technologies and frameworks, keeping the consultancy at the forefront of industry trends and standards.",
+      "Actively engaged with clients to understand their unique needs, leading to tailored UI solutions that directly addressed key business challenges.",
+    ],
   },
 ];
 
 export const PROJECTS: ProjectDetails[] = [
   {
-    name: 'Wingie',
+    name: "Accounting Portal Web App",
     description:
-      'A platform for comparing and finding affordable flights, as well as booking and purchasing tickets safely and easily in a few simple clicks.',
-    url: 'https://www.wingie.com',
-    previewImage: ProjectWingie,
+      "Project for a specialized accounting firm. Their goal was to modernize their client communication and workflow away from a complex excel spreadsheet and into a custom web app. The solution seamlessly integrated with QuickBooks Online, facilitating the direct retrieval of client data. AWS Lambda was used to process data through numerous proprietary calculations. The UI was built with unique and interactive data visualization tools, allowing clients to conveniently engage with and understand their financial data. Eventually, this app became a full fledged SaaS used by many other accounting firms.",
     technologies: [
-      'React',
-      'Typescript',
-      'React Bootstrap',
-      'Firebase',
-      'Express.js',
-      'PostgreSQL',
-      'Styled Components',
-      'Redux',
+      "React.js",
+      "Next.js",
+      "MUI",
+      "Typescript",
+      "Node.js",
+      "AWS: Lambda",
+      "PostgreSQL",
+      "Prisma",
+      "Terraform",
     ],
   },
   {
-    name: 'Fiskil',
+    name: "Senior Health Education Web App",
     description:
-      'A platform for accessing real-time open banking and energy data to help you grow your business, backed with scalable back-end infrastructure.',
-    url: 'https://fiskil.com.au',
-    previewImage: ProjectFiskil,
+      "Project for EdTech startup focused on senior health. This classroom based application was built to empower older adults with memory loss, Alzheimer’s, dementia, or related conditions through scheduled online classes. My role was to build out the admin portal for the already existing classroom app. This app allowed instructors and administration the ability to manage courses, classes, and participants in one central location. Even though the classroom app was already in progress when I came aboard, I spent considerable amounts of time helping with the socket connections and Agora API.",
+    url: "https://www.togetherseniorhealth.com/",
     technologies: [
-      'React',
-      'Next.js',
-      'Typescript',
-      'Tailwindcss',
-      'Material UI',
-      'Redux Toolkit',
-      'React Query',
-      'Express.js',
-      'PostgreSQL',
-      'Firebase',
-      'AWS Amplify',
-      'Cypress',
-      'Storybook',
+      "React.js",
+      "Next.js",
+      "MUI",
+      "Typescript",
+      "Node.js",
+      "AWS: Lambda, S3",
+      "MongoDB",
+      "Socket.io",
+      "Agora (Video Streaming API)",
     ],
   },
   {
-    name: 'Pepehousing',
+    name: "Crime Analytics Web App",
     description:
-      'A platform for renting a flat or room in Poland. You may browse hundreds of verified deals, contact the vendor, and pay online in a simple and secure manner.',
-    url: 'https://pepehousing.com',
-    previewImage: ProjectPepehousing,
+      "Project for a crime analytics startup wanting to rework their existing infrastructure and enhance the applications UI. This was a complete overhaul of the existing AWS infrastructure from Beanstalk to ECS using Terraform. Many services were split out from the previous monolith including a full data pipeline using Airflow. The UI was also refactored from React.js and vanilla JavaScript to Next.js and TypeScript.",
     technologies: [
-      'React',
-      'Next.js',
-      'Typescript',
-      'Tailwindcss',
-      'Redux Toolkit',
-      'React Query',
-      'Storybook',
+      "React.js",
+      "Next.js",
+      "Typescript",
+      "Node.js",
+      "GraphQL",
+      "AWS: ECS, S3",
+      "Apache Airflow",
+      "Neo4j",
+      "Okta",
+      "Terraform",
     ],
   },
 ];
 
-export const TESTIMONIALS: TestimonialDetails[] = [
-  {
-    personName: 'Krisztian Gyuris',
-    personAvatar: AvatarKrisztian,
-    title: 'Founder - inboxgenie.io',
-    testimonial:
-      'Job well done! I am really impressed. He is very very good at what he does:) I would recommend Sagar and will rehire in the future for Frontend development.',
-  },
-  {
-    personName: 'Eugen Esanu',
-    personAvatar: AvatarEugen,
-    title: 'Founder - shosho.design',
-    testimonial:
-      'Great guy, highly recommended for any COMPLEX front-end development job! His skills are top-notch and he will be an amazing addition to any team.',
-  },
-  {
-    personName: 'Joe Matkin',
-    personAvatar: AvatarDummy,
-    title: 'Freelancer',
-    testimonial:
-      'Sagar was extremely easy and pleasant to work with and he truly cares about the project being a success. Sagar has a high level of knowledge and was able to work on my MERN stack application without any issues.',
-  },
-];
+// export const TESTIMONIALS: TestimonialDetails[] = [
+//   {
+//     personName: "Krisztian Gyuris",
+//     personAvatar: AvatarKrisztian,
+//     title: "Founder - inboxgenie.io",
+//     testimonial:
+//       "Job well done! I am really impressed. He is very very good at what he does:) I would recommend Matt and will rehire in the future for Frontend development.",
+//   },
+//   {
+//     personName: "Eugen Esanu",
+//     personAvatar: AvatarEugen,
+//     title: "Founder - shosho.design",
+//     testimonial:
+//       "Great guy, highly recommended for any COMPLEX front-end development job! His skills are top-notch and he will be an amazing addition to any team.",
+//   },
+//   {
+//     personName: "Joe Matkin",
+//     personAvatar: AvatarDummy,
+//     title: "Freelancer",
+//     testimonial:
+//       "Matt was extremely easy and pleasant to work with and he truly cares about the project being a success. Matt has a high level of knowledge and was able to work on my MERN stack application without any issues.",
+//   },
+// ];
