@@ -13,7 +13,7 @@ const title =
   "Matt Smithburger | Full Stack Developer From Wadsworth, Australia.";
 const description =
   "A self-proclaimed designer who specializes in full stack development (React.js & Node.js), from Wadsworth, Australia.";
-const url = "https://msmithburger.dev";
+const url = "https://mattsmithburger.dev";
 
 export const metadata: Metadata = {
   metadataBase: new URL(url),
