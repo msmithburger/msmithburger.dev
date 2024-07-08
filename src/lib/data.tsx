@@ -233,7 +233,7 @@ export const EXPERIENCES: ExperienceDetails[] = [
   {
     logo: LogoUpwork,
     logoAlt: "Upwork logo",
-    position: "Independent Software Developer",
+    position: "Independent Full Stack Developer",
     startDate: new Date(2020, 7),
     currentlyWorkHere: true,
     summary: [
